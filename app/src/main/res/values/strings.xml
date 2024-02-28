@@ -3,4 +3,9 @@
     <string name="amount">amount</string>
     <string name="Amount">Amount</string>
     <string name="EnterAmount">Enter Amount</string>
+    <string name="TaxAmount">Tax Amount</string>
+    <string name="TaxLabel">Tax</string>
+    <string name="Tax">Tax Amount:</string>
+    <string name="AmountLabel">Amount:</string>
+    <string name="EnterTaxAmount">Enter Tax Amount</string>
 </resources>
