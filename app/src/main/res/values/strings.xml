@@ -15,4 +15,6 @@
     <string name="ButtonTwenty">20%</string>
     <string name="ClearButton">Clear</string>
     <string name="CalculateButton">Calculate</string>
+    <string name="TipsAmount">Tips Amount:</string>
+    <string name="GrandTotal">Grand Total:</string>
 </resources>
