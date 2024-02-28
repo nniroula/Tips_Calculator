@@ -1,20 +1,21 @@
 <resources>
     <string name="app_name">Tips Calculator App</string>
-    <string name="amount">amount</string>
-    <string name="Amount">Amount</string>
-    <string name="EnterAmount">Enter Amount</string>
-    <string name="TaxAmount">Tax Amount</string>
-    <string name="TaxLabel">Tax</string>
-    <string name="Tax">Tax Amount:</string>
+
     <string name="AmountLabel">Amount:</string>
+    <string name="EnterAmount">Enter Amount</string>
+
+    <string name="Tax">Tax Amount:</string>
     <string name="EnterTaxAmount">Enter Tax Amount</string>
+
     <string name="Tips">"Select Tips: "</string>
     <string name="ButtonZero">0%</string>
     <string name="ButtonFive">5%</string>
     <string name="ButtonTen">10%</string>
     <string name="ButtonTwenty">20%</string>
+
     <string name="ClearButton">Clear</string>
     <string name="CalculateButton">Calculate</string>
+
     <string name="TipsAmount">Tips Amount:</string>
     <string name="GrandTotal">Grand Total:</string>
 </resources>
