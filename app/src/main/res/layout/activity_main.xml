@@ -2,8 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:visibility="visible"
     tools:context=".MainActivity"
     tools:visibility="visible">
@@ -75,17 +75,19 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <RadioGroup
-        android:layout_width="245dp"
-        android:layout_height="208dp"
+        android:id="@+id/radioGroup"
+        android:layout_width="336dp"
+        android:layout_height="66dp"
         android:layout_marginStart="30dp"
-        android:layout_marginEnd="230dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/enterTaxAmount"
-        app:layout_constraintVertical_bias="0.03">
+        app:layout_constraintVertical_bias="1.0">
 
         <TextView
             android:id="@+id/textView7"
@@ -95,27 +97,28 @@
 
         <RadioButton
             android:id="@+id/buttonZero"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ButtonZero" />
 
         <RadioButton
             android:id="@+id/buttonFive"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ButtonFive" />
 
         <RadioButton
             android:id="@+id/buttonTen"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ButtonTen" />
 
         <RadioButton
             android:id="@+id/buttonTwenty"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ButtonTwenty" />
+
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
