@@ -8,4 +8,9 @@
     <string name="Tax">Tax Amount:</string>
     <string name="AmountLabel">Amount:</string>
     <string name="EnterTaxAmount">Enter Tax Amount</string>
+    <string name="Tips">"Select Tips: "</string>
+    <string name="ButtonZero">0%</string>
+    <string name="ButtonFive">5%</string>
+    <string name="ButtonTen">10%</string>
+    <string name="ButtonTwenty">20%</string>
 </resources>
