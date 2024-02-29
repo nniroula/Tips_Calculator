@@ -13,31 +13,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="260dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="5dp"
         android:text="@string/AmountLabel"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.382"
+        app:layout_constraintEnd_toStartOf="@+id/enterAmount"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.043" />
 
     <EditText
         android:id="@+id/enterAmount"
         android:layout_width="206dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="95dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
         android:layout_marginBottom="5dp"
         android:ems="10"
         android:inputType="text"
         android:text="@string/EnterAmount"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toEndOf="@+id/AmountLabel"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
@@ -50,34 +47,35 @@
         android:layout_marginEnd="260dp"
         android:layout_marginBottom="5dp"
         android:text="@string/Tax"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.604"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AmountLabel"
-        app:layout_constraintVertical_bias="0.042" />
+        app:layout_constraintVertical_bias="0.047" />
 
     <EditText
         android:id="@+id/enterTaxAmount"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
-        android:layout_marginEnd="56dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginBottom="5dp"
         android:ems="10"
         android:inputType="text"
         android:text="@string/EnterTaxAmount"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.759"
+        app:layout_constraintHorizontal_bias="0.736"
         app:layout_constraintStart_toEndOf="@+id/taxLabel"
         app:layout_constraintTop_toBottomOf="@+id/enterAmount"
         app:layout_constraintVertical_bias="0.0" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="301dp"
-        android:layout_height="56dp"
+        android:layout_width="317dp"
+        android:layout_height="53dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="180dp"
         android:layout_marginBottom="5dp"
@@ -93,7 +91,8 @@
             android:id="@+id/selectTips"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/Tips" />
+            android:text="@string/Tips"
+            android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/buttonZero"
@@ -137,7 +136,7 @@
         app:layout_constraintVertical_bias="0.027" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/calculateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
@@ -159,6 +158,9 @@
         android:layout_marginEnd="260dp"
         android:layout_marginBottom="5dp"
         android:text="@string/TipsAmount"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.552"
@@ -174,11 +176,45 @@
         android:layout_marginEnd="260dp"
         android:layout_marginBottom="5dp"
         android:text="@string/GrandTotal"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tipsAmount"
         app:layout_constraintVertical_bias="0.045" />
+
+    <TextView
+        android:id="@+id/tipsLabel"
+        android:layout_width="116dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="5dp"
+        android:text="$0.00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.987"
+        app:layout_constraintStart_toEndOf="@+id/tipsAmount"
+        app:layout_constraintTop_toBottomOf="@+id/calculateButton"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <TextView
+        android:id="@+id/totalLabel"
+        android:layout_width="123dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="5dp"
+        android:text="$0.00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.89"
+        app:layout_constraintStart_toEndOf="@+id/grandTotal"
+        app:layout_constraintTop_toBottomOf="@+id/tipsLabel"
+        app:layout_constraintVertical_bias="0.041" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
