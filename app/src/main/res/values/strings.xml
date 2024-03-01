@@ -18,4 +18,6 @@
 
     <string name="TipsAmount">Tips Amount:</string>
     <string name="GrandTotal">Grand Total:</string>
+    <string name="EnterYourAmount">Enter your amount</string>
+    <string name="TaxAmount">Enter tax amount</string>
 </resources>
