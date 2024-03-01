@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
         /* calculations */
         double sum = inputAmtToDecimal + inputTaxAmountToDecimal + tipsAmt;
-        DecimalFormat df = new DecimalFormat("##0.00");                 // Decimal Format
+        DecimalFormat df = new DecimalFormat("$##0.00");                 // Decimal Format
 
         /* display values on UI */
         grandTotalValue.setText(df.format(sum));
@@ -84,12 +84,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClearButtonClick(View view){
         double defaultTotal = 0.00;
+//        String resetValue = "$0.00";
         DecimalFormat df = new DecimalFormat("##0.00"); // Decimal Format
+//        DecimalFormat dfForTipAndTotal = new DecimalFormat("$0.00"); // Decimal Format
 
-        grandTotalValue.setText(df.format(defaultTotal));
         userInputAmount.setText(df.format(defaultTotal)); // setText takes String argument
         userTaxAmount.setText(df.format(defaultTotal));
+        grandTotalValue.setText(df.format(defaultTotal));
+//        grandTotalValue.setText(df.format(dfForTipAndTotal));
         viewTipsAmount.setText(df.format(defaultTotal));
+//        viewTipsAmount.setText(df.format(resetValue));
 
         /* radio buttons default to 0% and check zero button on clearing */
         zeroButton.setText("0%");
