@@ -30,8 +30,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /* get the values from amount, tax, and tips, use IDs */
-        /* user inputs */
+        /* user inputs -> get the values from amount, tax, and tips, use IDs  */
         userInputAmount = findViewById(R.id.enterAmount);
         userTaxAmount = findViewById(R.id.enterTaxAmount);
 
@@ -44,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
         /* grand total and tip amount */
         viewTipsAmount = findViewById(R.id.tipsAmountValue);
         grandTotalValue = findViewById(R.id.grandTotalValue);
+
+        /* Radio button for 0% is selected at the beginning */
+        zeroButton.setChecked(true);
     }
 
     public void calculateGrandTotal(View v){
@@ -90,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         viewTipsAmount.setText(df.format(defaultTotal));
 
         /* radio buttons default to 0% and check zero button on clearing */
-        zeroButton.setText("0");
+        zeroButton.setText("0%");
         zeroButton.setChecked(true);
     }
 }
