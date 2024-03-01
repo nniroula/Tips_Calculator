@@ -3,7 +3,6 @@ package com.example.tipscalculatorapp;
 import androidx.appcompat.app.AppCompatActivity;
 import android.icu.text.DecimalFormat;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -30,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /* user inputs -> get the values from amount, tax, and tips, use IDs  */
+        /* user input -> get the values from amount, tax, and tips, use IDs  */
         userInputAmount = findViewById(R.id.enterAmount);
         userTaxAmount = findViewById(R.id.enterTaxAmount);
 
@@ -87,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
         /* calculations */
         double sum = inputAmtToDecimal + inputTaxAmountToDecimal + tipsAmt;
-        DecimalFormat df = new DecimalFormat("$##0.00");                 // Decimal Format
+        DecimalFormat df = new DecimalFormat("$##0.00");           // Decimal Format
 
         /* display values on UI */
         grandTotalValue.setText(df.format(sum));
