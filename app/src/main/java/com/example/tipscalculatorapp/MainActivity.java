@@ -1,7 +1,6 @@
 package com.example.tipscalculatorapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.icu.text.DecimalFormat;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     /* variables */
@@ -51,13 +51,29 @@ public class MainActivity extends AppCompatActivity {
     public void calculateGrandTotal(View v){
         /* user amount */
         TextView inputAmt = userInputAmount;
-        double inputAmtToDecimal = Double.parseDouble(inputAmt.getText().toString());
+        double inputAmtToDecimal;
+        double inputTaxAmountToDecimal;
+        try{
+            inputAmtToDecimal = Double.parseDouble(inputAmt.getText().toString());
+        } catch (NumberFormatException e){
+             Toast toast = Toast.makeText(this, "Amount must be a decimal number.", Toast.LENGTH_LONG);
+             toast.setMargin(2, 4);
+             toast.show();
+             return;
+        }
 
         /* user tax amount */
         TextView inputTaxAmount = userTaxAmount;
-        double inputTaxAmountToDecimal = Double.parseDouble(inputTaxAmount.getText().toString());
+        try{
+            inputTaxAmountToDecimal = Double.parseDouble(inputTaxAmount.getText().toString());
+        } catch(NumberFormatException e){
+            Toast toast = Toast.makeText(this, "Tax amount must be a decimal number.", Toast.LENGTH_LONG);
+            toast.setMargin(2, 4);
+            toast.show();
+            return;
+        }
 
-        /* tips amount  zeroButton  fiveButton  tenButton  twentyButton */
+        /* tip amount,  zeroButton,  fiveButton,  tenButton,  twentyButton */
         double tipsAmt = 0.00;
         if (zeroButton.isChecked()) {
             tipsAmt = 0.00;
@@ -84,16 +100,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClearButtonClick(View view){
         double defaultTotal = 0.00;
-//        String resetValue = "$0.00";
         DecimalFormat df = new DecimalFormat("##0.00"); // Decimal Format
-//        DecimalFormat dfForTipAndTotal = new DecimalFormat("$0.00"); // Decimal Format
+        DecimalFormat dfForTipAndTotal = new DecimalFormat("$##0.00"); // Decimal Format
 
         userInputAmount.setText(df.format(defaultTotal)); // setText takes String argument
         userTaxAmount.setText(df.format(defaultTotal));
-        grandTotalValue.setText(df.format(defaultTotal));
-//        grandTotalValue.setText(df.format(dfForTipAndTotal));
-        viewTipsAmount.setText(df.format(defaultTotal));
-//        viewTipsAmount.setText(df.format(resetValue));
+        grandTotalValue.setText(dfForTipAndTotal.format(defaultTotal));
+        viewTipsAmount.setText(dfForTipAndTotal.format(defaultTotal));
 
         /* radio buttons default to 0% and check zero button on clearing */
         zeroButton.setText("0%");
