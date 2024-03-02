@@ -5,8 +5,8 @@
     <string name="AmountLabel">Rakam</string>
     <string name="EnterAmount">Rupaiya Launuhos</string>
     <string name="Tax">Rajaswa Rakam</string>
-    <string name="EnterTaxAmount">Jajaswas Rakam Launuhos</string>
-    <string name="Tips">tips channuhos</string>
+    <string name="EnterTaxAmount">Rajaswas Rakam Launuhos</string>
+    <string name="Tips">Tips channuhos</string>
     <string name="ButtonZero">Sunya Pratisad</string>
     <string name="ButtonFive">Panch Pratisad</string>
     <string name="ButtonTen">Daas Pratisad</string>
@@ -15,6 +15,6 @@
     <string name="CalculateButton">Gudan</string>
     <string name="TipsAmount">Tips Rupaiya</string>
     <string name="GrandTotal">Jaama Rupaiya</string>
-    <string name="EnterYourAmount">Taipaiko Rakam Launuhos</string>
+    <string name="EnterYourAmount">Tapaiko Rakam Launuhos</string>
     <string name="TaxAmount">Rajaswa Rakam Launuhos</string>
 </resources>
